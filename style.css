@@ -1,0 +1,60 @@
+.container{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.card {
+  display: relative;
+  margin:10px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  padding: 20px;
+  border-radius: 23px;
+  width: 416px;
+  height: 492px;
+  perspective: 1000px;
+  &:hover {
+      & .front {
+         transform: rotateY(180deg);
+      }
+      & .back {
+         transform: rotateY(360deg);
+      }
+  }
+}
+.front, .back {
+   position: absolute;
+   background: #fff;
+   border-radius: 23px;
+   overflow: hidden;
+   outline: none;
+   box-shadow: 0 2px 2px 2px rgba(190, 190, 190, 0.4);
+   width: 100%;
+   height: 100%;
+   backface-visibility: hidden;
+   transition: all .9s;
+}
+.front {
+   background-color: #fff;
+}
+.back {
+  background-color: #000;
+   transform: rotateY(180deg);
+}
+/*.cardhole {
+    background: #000;
+    width: 23px;
+    height: 23px;
+    left: 84px;
+    border-radius: 50%;
+}
+.cardholeTwo {
+    background: #000;
+    width: 23px;
+    height: 23px;
+    right: 184px;
+    border-radius: 50%;
+}*/
